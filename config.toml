@@ -1,12 +1,13 @@
 ["setup.cfg".flake8]
 show-source = true
 
-exclude =
+exclude = """
     .git,
     dist,
     __pypackages__
+    """
 
-ignore =
+ignore = """
     C408,
     C812,
     C815,
@@ -76,6 +77,7 @@ ignore =
     WPS601,
     WPS604,
     # Z115,
+    """
 
 doctests = True
 
@@ -89,9 +91,9 @@ max-line-length = 88
 max-local-variables = 20
 max-module-members = 50
 
-inline-quotes = double
+inline-quotes = "double"
 
-dictionaries=en_US,python,technical,django
+dictionaries = "en_US,python,technical,django"
 
 ["pyproject.toml".tool.isort]
 py_version = 39
