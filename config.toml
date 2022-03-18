@@ -1,0 +1,142 @@
+["setup.cfg".flake8]
+show-source = true
+
+exclude =
+    .git,
+    dist,
+    __pypackages__
+
+ignore =
+    C408,
+    C812,
+    C815,
+    C816,
+    DAR101,
+    DAR201,
+    DAR301,
+    DAR401,
+    # D202,
+
+    # E111,
+
+    # E133,
+    E203,
+    # E265,
+    E800,
+    # EXE001,
+    # F841,
+    # Q000,
+    RST219,
+    # RST299,
+    RST305,
+    S301,
+    S311,
+    # S322,
+    S403,
+    # S404,
+    # S603,
+    # S607,
+    # SC100,
+    # SC200,
+    W503,
+    WPS110,
+    WPS111,
+    # WPS118,
+    WPS120,
+    WPS220,
+    WPS221,
+    WPS231,
+    WPS237,
+    WPS300,
+    WPS301,
+    WPS305,
+    WPS306,
+    # WPS316,
+    WPS326,
+    WPS332,
+    # WPS337,
+    WPS347,
+    WPS348,
+    # WPS352,
+    # WPS358,
+    # WPS404,
+    # WPS407,
+    WPS414,
+    WPS420,
+    WPS421,
+    WPS426,
+    # WPS430,
+    WPS432,
+    WPS435,
+    # WPS437,
+    # WPS440,
+    # WPS441,
+    WPS453,
+    # WPS462,
+    WPS601,
+    WPS604,
+    # Z115,
+
+doctests = True
+
+max-annotation-complexity = 5
+max-complexity = 20
+max-expressions = 15
+max-import-from-members = 20
+max-imports = 50
+max-line-complexity = 20
+max-line-length = 88
+max-local-variables = 20
+max-module-members = 50
+
+inline-quotes = double
+
+dictionaries=en_US,python,technical,django
+
+["pyproject.toml".tool.isort]
+py_version = 39
+
+profile = "black"
+group_by_package = true
+color_output = true
+combine_straight_imports = true
+
+
+import_heading_stdlib = "Standard Library"
+
+
+known_db = ["lucene", "lupyne", "elasticsearch", "sqlite", "shelve"]
+import_heading_db = "Database"
+
+known_tf = ["tensorflow", "keras"]
+import_heading_tf = "Tensorflow"
+
+known_torch = ["torch" "torchdata"]
+import_heading_torch = "Torch"
+
+known_types = ["typing", "types"]
+import_heading_types = "Types"
+
+known_config = ["config", "settings", "cfg", "smile_config"]
+import_heading_config = "Config"
+
+known_math = ["numpy", "scipy", "sklearn", "pandas"]
+import_heading_math = "Math"
+
+import_heading_thirdparty = "Others"
+
+import_heading_localfolder = "Local"
+known_localfolder = ["sites", "src"]
+
+sections = ["FUTURE", "FIRSTPARTY", "STDLIB", "DB", "MATH", "TF", "TORCH", "CONFIG", "TYPES", "THIRDPARTY", "LOCALFOLDER"]
+
+["pyproject.toml".tool.pyright]
+pythonVersion = "3.9"
+extraPaths = [
+    "__pypackages__/3.9"
+]
+
+exclude = [
+    "**/__pycache__",
+]
+reportMissingTypeStubs = true
