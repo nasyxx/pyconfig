@@ -79,7 +79,7 @@ ignore = """
     # Z115,
     """
 
-doctests = True
+doctests = true
 
 max-annotation-complexity = 5
 max-complexity = 20
@@ -113,7 +113,7 @@ import_heading_db = "Database"
 known_tf = ["tensorflow", "keras"]
 import_heading_tf = "Tensorflow"
 
-known_torch = ["torch" "torchdata"]
+known_torch = ["torch", "torchdata"]
 import_heading_torch = "Torch"
 
 known_types = ["typing", "types"]
